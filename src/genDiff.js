@@ -1,9 +1,8 @@
-import readFile from './readFiles.js';
 import { extname } from 'path';
+import readFile from './readFiles.js';
 import parse from './parsers.js';
 import comparison from './comparison.js';
 import outputController from './formatters/index.js';
-
 
 const genDiff = (file1, file2, format) => {
   const fileContent1 = readFile(file1);
