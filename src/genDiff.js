@@ -1,5 +1,5 @@
 import { extname } from 'path';
-import readFile from './readFiles.js';
+import readFile from './utils.js';
 import parse from './parsers.js';
 import comparison from './comparison.js';
 import outputController from './formatters/index.js';
