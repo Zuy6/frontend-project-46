@@ -23,7 +23,7 @@
 
 # Пользование программой
 
-## [1.Справочная информация об утилите] (https://asciinema.org/a/1CJ8zzKO7n6bHxh7O2YV4Rc2V)
+## 1.Справочная информация об утилите ![Описание изображения](https://asciinema.org/a/1CJ8zzKO7n6bHxh7O2YV4Rc2V)
 
 
 
