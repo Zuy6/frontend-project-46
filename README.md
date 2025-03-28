@@ -24,7 +24,7 @@
 # Пользование программой
 
 ## 1.Справочная информация об утилите
-[![asciicast](https://asciinema.org/a/1CJ8zzKO7n6bHxh7O2YV4Rc2V.svg)](https://asciinema.org/a/1CJ8zzKO7n6bHxh7O2YV4Rc2V)
+[![Демонстрация](https://asciinema.org/a/1CJ8zzKO7n6bHxh7O2YV4Rc2V.svg)](https://asciinema.org/a/1CJ8zzKO7n6bHxh7O2YV4Rc2V)
 
 
 
