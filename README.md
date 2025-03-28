@@ -23,12 +23,9 @@
 
 # Пользование программой
 
-## Справочная информация об утилите 
-<iframe width="560" height="315"
-  src="https://asciinema.org/a/1CJ8zzKO7n6bHxh7O2YV4Rc2V"
-  title="Справочная информация" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen></iframe>
+## 1.Справочная информация об утилите
+[![Справочная информация](https://asciinema.org/a/1CJ8zzKO7n6bHxh7O2YV4Rc2V)]
+
 
 Суть игры в следующем: пользователю показывается два случайных числа, например, 25 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
 **Пример игры:**[brain-gcd](https://asciinema.org/a/07630KmRIS9llTwczwMT32dqE)
