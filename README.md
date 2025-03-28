@@ -23,10 +23,13 @@
 
 # Пользование программой
 
-## 1.Справочная информация об утилите
+## Справочная информация
+- `gendiff -h` - помощь.
+- `gendiff -V` - версия проекта.
+- `gendiff <filepath1> <filepath2> [--format <format>]` - начало работы с проектом.
+- `make test` - запуск тестов.
+- `make lint` - проверка стиля кода.
 [![Демонстрация](https://asciinema.org/a/1CJ8zzKO7n6bHxh7O2YV4Rc2V.svg)](https://asciinema.org/a/1CJ8zzKO7n6bHxh7O2YV4Rc2V)
 
-
-
-Суть игры в следующем: пользователю показывается два случайных числа, например, 25 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
-**Пример игры:**[brain-gcd](https://asciinema.org/a/07630KmRIS9llTwczwMT32dqE)
+## Сравнение файлов (Демонстрация работы)
+[![Демонстрация](https://asciinema.org/a/Mx0t0FNVZHsDoJCHBwgH2KmQK.svg)](https://asciinema.org/a/Mx0t0FNVZHsDoJCHBwgH2KmQK)
