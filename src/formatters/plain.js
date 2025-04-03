@@ -1,30 +1,31 @@
 import _ from 'lodash';
 
-const formatValue = (value) => {
-  if (_.isObject(value) && value !== null) return '[complex value]';
-  return typeof value === 'string' ? `'${value}'` : String(value);
+const getFormatValue = (value) => {
+  if (_.isObject(value)) {
+    return '[complex value]';
+  }
+  return typeof value === 'string' ? `'${value}'` : value;
 };
 
-const formatPlain = (data, path = '') => data.reduce((acc, item) => {
-  const newPath = path ? `${path}.${item.key}` : item.key;
-
-  if (item.type === 'nested') {
-    return acc.concat(formatPlain(item.children, newPath));
-  }
-  if (item.type === 'added') {
-    const formattedValue = formatValue(item.value);
-    return acc.concat(`Property '${newPath}' was added with value: ${formattedValue}`);
-  }
-  if (item.type === 'removed') {
-    return acc.concat(`Property '${newPath}' was removed`);
-  }
-  if (item.type === 'changed') {
-    const oldValue = formatValue(item.oldValue);
-    const newValue = formatValue(item.newValue);
-    return acc.concat(`Property '${newPath}' was updated. From ${oldValue} to ${newValue}`);
-  }
-
-  return acc;
-}, []).join('\n');
+const formatPlain = (tree, path = '') => {
+  const result = tree.reduce((acc, node) => {
+    const [key] = Object.keys(node);
+    switch (node.nodeType) {
+      case 'added':
+        return [...acc, `Property '${path}${key}' was added with value: ${getFormatValue(node[key])}`];
+      case 'removed':
+        return [...acc, `Property '${path}${key}' was removed`];
+      case 'updated':
+        return [...acc, `Property '${path}${key}' was updated. From ${getFormatValue(node[key].valueDeleted)} to ${getFormatValue(node[key].valueAdded)}`];
+      case 'unchanged':
+        return acc;
+      case 'nested':
+        return [...acc, formatPlain(node[key], `${path + key}.`)];
+      default:
+        return acc;
+    }
+  }, []);
+  return result.join('\n');
+};
 
 export default formatPlain;
