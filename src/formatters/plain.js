@@ -24,7 +24,7 @@ const formatPlain = (data, path = '') => data.reduce((acc, item) => {
     return acc.concat(`Property '${newPath}' was updated. From ${oldValue} to ${newValue}`);
   }
 
-  return acc; // в случае 'unchanged' просто возвращаем acc без изменений
+  return acc;
 }, []).join('\n');
 
 export default formatPlain;

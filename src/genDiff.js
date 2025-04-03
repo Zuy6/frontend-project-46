@@ -1,8 +1,8 @@
 import { extname } from 'path';
 import readFile from './utils.js';
 import parse from './parsers.js';
-import comparison from './comparison.js';
-import outputController from './formatters/index.js';
+import comparer from './comparer.js';
+import formatter from './formatters/index.js';
 
 const genDiff = (file1, file2, format) => {
   const fileContent1 = readFile(file1);
@@ -14,9 +14,9 @@ const genDiff = (file1, file2, format) => {
   const parsedData1 = parse(fileContent1, ext1);
   const parsedData2 = parse(fileContent2, ext2);
 
-  const comparedFiles = comparison(parsedData1, parsedData2);
+  const comparedFiles = comparer(parsedData1, parsedData2);
 
-  const resultDiff = outputController(comparedFiles, format);
+  const resultDiff = formatter(comparedFiles, format);
   return resultDiff;
 };
 

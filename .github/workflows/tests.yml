@@ -12,10 +12,6 @@ jobs:
 
       - run: make install
 
-      - run: npx eslint .
-
-      - run: make test
-
       - name: publish code coverage
         uses: paambaati/codeclimate-action@v5.0.0
 

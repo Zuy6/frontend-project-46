@@ -8,7 +8,7 @@ const parse = (data, ext) => {
     case 'yaml':
       return yaml.load(data);
     default:
-      throw new Error(`Unsupported file format: ${ext}`);
+      throw new Error(`Unknown format: ${ext}`);
   }
 };
 export default parse;
