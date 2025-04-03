@@ -1,7 +1,7 @@
 import renderDiff from './stylish.js';
 import formatPlain from './plain.js';
 
-const formatter = (data, format) => {
+const outputController = (data, format = 'stylish') => {
   switch (format) {
     case 'stylish':
       return renderDiff(data);
@@ -10,8 +10,8 @@ const formatter = (data, format) => {
     case 'json':
       return JSON.stringify(data, null, 2);
     default:
-      throw new Error(`Unsupported format: ${format}`);
+      throw new Error(`Unsupported file format: ${format}`);
   }
 };
 
-export default formatter;
+export default outputController;

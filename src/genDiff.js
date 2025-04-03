@@ -1,7 +1,7 @@
 import { extname } from 'path';
 import readFile from './utils.js';
-import parse from './parsers.js';
 import comparer from './comparer.js';
+import parse from './parsers.js';
 import outputController from './formatters/index.js';
 
 const genDiff = (file1, file2, format) => {
